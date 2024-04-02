@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/text_infor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin món ăn"
+        android:textSize="26sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:fontFamily="@font/salma_medium"
+        android:layout_marginTop="10dp"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="220dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text_infor"
+        android:background="@color/purple_500"/>
+
+    <RelativeLayout
+        android:id="@+id/infor_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/item_imageFood"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@drawable/food"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/item_nameFood"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/item_imageFood"
+            android:hint="Tên món ăn"
+            android:textColor="@color/black"
+            android:textColorHint="#D3D3D3"
+            android:textSize="16sp"
+            tools:ignore="Autofill,HardcodedText,TextFields" />
+
+        <EditText
+            android:id="@+id/item_priceFood"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_nameFood"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/item_imageFood"
+            android:hint="Giá món ăn"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="#D3D3D3"
+            android:textSize="16sp"
+            tools:ignore="Autofill,HardcodedText" />
+
+        <EditText
+            android:id="@+id/item_timeCooking"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_priceFood"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/item_imageFood"
+            android:hint="Thời gian hoàn thành"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="#D3D3D3"
+            android:textSize="16sp"
+            tools:ignore="Autofill,HardcodedText" />
+
+        <EditText
+            android:id="@+id/item_descFood"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_timeCooking"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/item_imageFood"
+            android:hint="Miêu tà món ăn"
+            android:textColor="@color/black"
+            android:textColorHint="#D3D3D3"
+            android:textSize="16sp"
+            tools:ignore="Autofill,HardcodedText"
+            android:inputType="text"/>
+
+        <Spinner
+            android:id="@+id/item_typeFood"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_descFood"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/item_imageFood" />
+
+        <Button
+            android:id="@+id/item_btnUpdate"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/item_typeFood"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_bg_design"
+            android:text="Update"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+</RelativeLayout>

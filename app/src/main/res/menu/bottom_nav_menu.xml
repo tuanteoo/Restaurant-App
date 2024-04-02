@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        tools:ignore="HardcodedText"
+        android:id="@+id/food"
+        android:icon="@drawable/fast_food"
+        android:title="Món Ăn"/>
+
+    <item
+        android:id="@+id/order"
+        android:icon="@drawable/order_admin"
+        android:title="Đơn Hàng"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/his_order"
+        android:title="Lịch Sử"
+        android:icon="@drawable/baseline_history_24"
+        tools:ignore="HardcodedText" />
+
+</menu>

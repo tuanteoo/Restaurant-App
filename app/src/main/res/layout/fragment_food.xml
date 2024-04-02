@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FoodFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:id="@+id/searchFood"
+                android:layout_width="380dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#F5F5F5"
+                android:background="@drawable/search_bg">
+
+                <EditText
+                    android:id="@+id/search_foodName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/edittext_bg"
+                    android:fontFamily="@font/salma_medium"
+                    android:hint="Tìm kiếm món ăn"
+                    android:textColor="@color/black"
+                    android:textColorHint="#C0C0C0	"
+                    android:textSize="15sp"
+                    tools:ignore="Autofill,HardcodedText,RelativeOverlap,TextFields" />
+
+                <ImageButton
+                    android:id="@+id/btn_findFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/ic_baseline_search_24"
+                    android:backgroundTint="#C0C0C0"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#F5F5F5"
+                android:layout_below="@id/searchFood"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/text_infor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông tin món ăn"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:layout_below="@id/view"
+                android:layout_marginTop="5dp"
+                tools:ignore="HardcodedText" />
+
+            <RelativeLayout
+                android:id="@+id/infor_food"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_infor"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/image_food"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/food"
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
+
+                <EditText
+                    android:id="@+id/name_food"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@id/image_food"
+                    android:hint="Tên món ăn"
+                    android:textColor="@color/black"
+                    android:textColorHint="#D3D3D3"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill,HardcodedText,TextFields" />
+
+                <EditText
+                    android:id="@+id/price_food"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_food"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@id/image_food"
+                    android:hint="Giá món ăn"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="#D3D3D3"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill,HardcodedText" />
+
+                <EditText
+                    android:id="@+id/time_cooking"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/price_food"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@id/image_food"
+                    android:hint="Thời gian hoàn thiện"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="#D3D3D3"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill,HardcodedText" />
+
+                <EditText
+                    android:id="@+id/descrip_food"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_cooking"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@id/image_food"
+                    android:hint="Miêu tà món ăn"
+                    android:textColor="@color/black"
+                    android:textColorHint="#D3D3D3"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill,HardcodedText"
+                    android:inputType="text"/>
+
+                <Spinner
+                    android:id="@+id/type_food"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/descrip_food"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/image_food" />
+
+                <Button
+                    android:id="@+id/btn_AddFood"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/type_food"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_bg_design"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listFood_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/infor_food"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
